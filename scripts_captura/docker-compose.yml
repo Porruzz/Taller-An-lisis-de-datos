@@ -1,0 +1,38 @@
+services:
+  receptor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lan_receptor_b
+    hostname: receptor-b
+    command: ["iperf3", "-s"]
+    networks:
+      lan_lab:
+        ipv4_address: 192.168.50.20
+
+  emisor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lan_emisor_a
+    hostname: emisor-a
+    depends_on:
+      - receptor
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ../datos/crudos:/lab/datos/crudos
+      - .:/lab/scripts:ro
+    command: ["sleep", "infinity"]
+    networks:
+      lan_lab:
+        ipv4_address: 192.168.50.10
+
+networks:
+  lan_lab:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.50.0/24
+          gateway: 192.168.50.1

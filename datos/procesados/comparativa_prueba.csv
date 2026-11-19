@@ -1,0 +1,4 @@
+Modelo,Partición,n_ventanas,positivos_reales,alertas_emitidas,VP,FP,FN,VN,precision,sensibilidad,especificidad,exactitud,f1,inicios_evaluables,inicios_anticipados,inicios_omitidos,frac_inicios_anticipados,persistencia_evaluable,persistencia_detectada,persistencia_omitida,sensibilidad_persistencia
+Regresión Lineal (theta=1),Prueba (c05-c06),248,80,179,78,101,2,67,0.43575418994413406,0.975,0.39880952380952384,0.5846774193548387,0.6023166023166022,5,3,2,0.6,75,75,0,1.0
+"Regresión Lineal (theta*=295.16, val.)",Prueba (c05-c06),248,80,67,67,0,13,168,1.0,0.8375,1.0,0.9475806451612904,0.9115646258503401,5,0,5,0.0,75,67,8,0.8933333333333333
+Regla Base (r_k >= 9.60 Mbit/s),Prueba (c05-c06),248,80,70,70,0,10,168,1.0,0.875,1.0,0.9596774193548387,0.9333333333333333,5,0,5,0.0,75,70,5,0.9333333333333333

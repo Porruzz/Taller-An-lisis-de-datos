@@ -1,0 +1,60 @@
+=== c01 ===
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 96 bytes
+73088 packets captured
+73088 packets received by filter
+0 packets dropped by kernel
+--- Verificacion final tc -s (c01) ---
+qdisc tbf 10: root refcnt 9 rate 10Mbit burst 16Kb lat 13.1ms 
+ Sent 90777577 bytes 73197 pkt (dropped 15043, overlimits 105232 requeues 0) 
+ backlog 0b 0p requeues 0
+
+=== c02 ===
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 96 bytes
+66775 packets captured
+66775 packets received by filter
+0 packets dropped by kernel
+--- Verificacion final tc -s (c02) ---
+qdisc tbf 10: root refcnt 9 rate 10Mbit burst 16Kb lat 13.1ms 
+ Sent 173714227 bytes 140078 pkt (dropped 30086, overlimits 210478 requeues 0) 
+ backlog 0b 0p requeues 0
+
+=== c03 ===
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 96 bytes
+78097 packets captured
+78097 packets received by filter
+0 packets dropped by kernel
+--- Verificacion final tc -s (c03) ---
+qdisc tbf 10: root refcnt 9 rate 10Mbit burst 16Kb lat 13.1ms 
+ Sent 270713361 bytes 218311 pkt (dropped 47412, overlimits 342570 requeues 0) 
+ backlog 0b 0p requeues 0
+
+=== c04 ===
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 96 bytes
+82385 packets captured
+82385 packets received by filter
+0 packets dropped by kernel
+--- Verificacion final tc -s (c04) ---
+qdisc tbf 10: root refcnt 9 rate 10Mbit burst 16Kb lat 13.1ms 
+ Sent 373038409 bytes 300836 pkt (dropped 62679, overlimits 445101 requeues 0) 
+ backlog 0b 0p requeues 0
+
+=== c05 ===
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 96 bytes
+92763 packets captured
+92763 packets received by filter
+0 packets dropped by kernel
+--- Verificacion final tc -s (c05) ---
+qdisc tbf 10: root refcnt 9 rate 10Mbit burst 16Kb lat 13.1ms 
+ Sent 488253280 bytes 393754 pkt (dropped 77288, overlimits 553000 requeues 0) 
+ backlog 0b 0p requeues 0
+
+=== c06 ===
+tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 96 bytes
+80205 packets captured
+80205 packets received by filter
+0 packets dropped by kernel
+--- Verificacion final tc -s (c06) ---
+qdisc tbf 10: root refcnt 9 rate 10Mbit burst 16Kb lat 13.1ms 
+ Sent 587870473 bytes 474083 pkt (dropped 99921, overlimits 707678 requeues 0) 
+ backlog 0b 0p requeues 0
+

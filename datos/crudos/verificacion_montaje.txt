@@ -1,0 +1,23 @@
+=== Verificacion inicial del montaje (2026-11-19T21:22:45Z) ===
+--- ip -br addr ---
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0@if20        UP             192.168.50.10/24 
+--- ping a receptor 192.168.50.20 ---
+PING 192.168.50.20 (192.168.50.20) 56(84) bytes of data.
+64 bytes from 192.168.50.20: icmp_seq=1 ttl=64 time=0.464 ms
+64 bytes from 192.168.50.20: icmp_seq=2 ttl=64 time=0.044 ms
+64 bytes from 192.168.50.20: icmp_seq=3 ttl=64 time=0.055 ms
+
+--- 192.168.50.20 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+rtt min/avg/max/mdev = 0.044/0.187/0.464/0.195 ms
+--- qdisc original en eth0 ---
+qdisc noqueue 0: root refcnt 2 
+--- Verificacion TBF textual (tc -s) ---
+qdisc tbf 10: root refcnt 9 rate 10Mbit burst 16Kb lat 13.1ms 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+--- Verificacion TBF JSON (tc -j -s) ---
+[{"kind":"tbf","handle":"10:","root":true,"refcnt":9,"options":{"rate":1250000,"burst":16383,"lat":13107},"bytes":0,"packets":0,"drops":0,"overlimits":0,"requeues":0,"backlog":0,"qlen":0}]
+--- Estado restaurado de qdisc al finalizar ---
+qdisc noqueue 0: root refcnt 2 

@@ -1,0 +1,26 @@
+# Archivos y cachés de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+.env
+
+# Checkpoints de Jupyter
+.ipynb_checkpoints/
+
+# Configuración de editores y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporales locales (conservando expresamente los logs de cola entregables)
+*.tmp
+*.bak
+!datos/crudos/*_cola.log
